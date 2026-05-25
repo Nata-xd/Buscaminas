@@ -1,0 +1,81 @@
+# Diseño del Proyecto - Buscaminas
+
+
+## Descripción General
+
+El proyecto consiste en una implementación del juego Buscaminas (clásico) desarrollado en Java.  
+
+El programa permite al usuario interactuar mediante consola, descubriendo casillas y evitando minas utilizando banderas para marcar su posición.
+
+## Estructura del Proyecto
+
+El proyecto está organizado de forma que se separa la lógica del programa.
+
+## Clase Main
+
+La clase "Main" es el punto de entrada del programa.
+Cumple con las siguientes responsabilidades:
+- Iniciar la ejecución.
+- Capturar los datos del usuario.
+- Mostrar los mensajes en consola.
+- Controlar la dirección del juego.
+
+# Paquete modelo
+
+El paquete "modelo" contiene las clases principales de la lógica del juego, como lo son las bombas, los números que nos indican cuantas bombas hay alrededor, la "cuadrícula" en la que nuestro juego es plasmada y juego que es donde se aplican principalmente nuestros métodos.
+
+## Clase Juego
+
+La clase `Juego` administra toda la lógica principal del Buscaminas.
+Funciones:
+- Crea el tablero.
+- Inicializa las casillas.
+- Controla el desarrollo de la partida.
+- Verifica condiciones de victoria y derrota.
+- Gestiona la interacción del usuario.
+
+## Clase Cuadricula
+
+Representa una casilla del tablero.
+Cumple con:
+- Almacenar información de cada posición.
+- Saber si la casilla fue descubierta.
+- Identificar si contiene una bomba o un número.
+
+## Clase Bomba
+
+Representa las casillas que contienen minas.
+Función:
+- Permitir detectar derrota al ser seleccionadas.
+
+## Clase Numero
+
+Representa casillas numéricas.
+Funciones:
+- Almacenar el número de bombas cercanas.
+
+- Mostrar en consola al jugador el numero de bombas adyacentes.
+
+# Paquete enums
+
+## Enum Estados
+
+El enum "Estados" se utiliza para representar los diferentes estados posibles de las casillas o del juego, evitando valores inválidos, o un Out of Bound Exception.
+
+## Diseño del Tablero
+
+El tablero se maneja mediante matrices (arreglos) bidimensionales.
+Se utilizan estructuras para:
+- Almacenar minas.
+- Guardar casillas descubiertas.
+
+
+# Control de errores
+
+- Límites del tablero.
+- Casillas repetidas.
+
+
+# Cosas a mejorar o añadir
+- Temporizador.
+-Guardado de partidas (no supimos como).

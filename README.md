@@ -9,7 +9,7 @@
 Al iniciar, el programa te mostrará las siguientes opciones:
 
 ```
-\n--- BUSCAMINAS ---
+--- BUSCAMINAS ---
 
 1). Facil(9x9 con 10 bombas)
 2). Medio(16x16 con 40 bombas)

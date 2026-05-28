@@ -196,7 +196,6 @@ public class Juego {
 
     // Imprimir Cuadricula (prueba)
     public String imprimirCuadricula() throws Exception {
-
         try {
 
             String retorno = "";
@@ -239,7 +238,7 @@ public class Juego {
         if (casilla instanceof Bomba)
             perder();
         else {
-            Numero numero = (Numero) cuadricula[fila][columna];
+            Numero numero = (Numero) casilla;
 
             // Revisa que sea un espacio vacio
             if (numero.getNumeroBombasAlrededor() > 0)
@@ -337,18 +336,16 @@ public class Juego {
     }
 
     public void revisarFinJuego() {
-
-        boolean finJuego = true;
         for (int i = 0; i <= cuadricula.length - 1; i++) {
             for (int j = 0; j <= cuadricula[0].length - 1; j++) {
                 if (cuadricula[i][j] instanceof Numero numero) {
                     if (!numero.getPresionado()) {
-                        finJuego = false;
+                        return;
                     }
                 }
             }
         }
-        setWin(finJuego);
+        ganar();
     }
 
     public void ponerBandera(int fila, int columna) {
@@ -372,7 +369,7 @@ public class Juego {
 
     }
 
-    public void ganar() {
+    public void ganar(){
         setWin(true);
     }
 

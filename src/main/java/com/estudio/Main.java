@@ -18,8 +18,9 @@ public class Main {
     }
 
     private static int leerEnteroEnRango(Scanner scanner, String mensaje, int minimo, int maximo) {
+        int valor = 0;
         while (true) {
-            int valor = leerEntero(scanner, mensaje);
+            valor = leerEntero(scanner, mensaje);
 
             if (valor >= minimo && valor <= maximo) {
                 return valor;

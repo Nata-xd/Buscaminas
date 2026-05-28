@@ -10,6 +10,7 @@ public abstract class Cuadricula {
 
     //Constructor
     Cuadricula(){
+        //Se inicializan las variables de la clase
         presionado = false;
         estado = Estados.VACIO; 
     }
